@@ -1,0 +1,5 @@
+print('Com as novas promoções de início de ano, todos os produtos estão com desconto de 10%')
+preço = float(input('Qual o preço do produto? R$'))
+preçofinal = preço - (preço * 10 / 100)
+print('O preço do produto é R${:.2f}, mas com o desconto fica por apenas R${:.2f}'.format(preço, preçofinal))
+print('Não fique de fora, aproveite as promoções!!')
