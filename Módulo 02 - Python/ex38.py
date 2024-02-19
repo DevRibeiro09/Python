@@ -10,4 +10,3 @@ else:
     print('O número {:.1f} é maior que o número {:.1f}.'.format(n2, n1))
 
 
-    

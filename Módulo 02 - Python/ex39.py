@@ -2,15 +2,15 @@
 # SE ELE AINDA VAI SE ALISTAR, SE JÁ ESTÁ NA HORA OU SE JÁ PASSOU DO TEMPO DE ALISTAMENTO;
 # O PROGRAMA DEVE MOSTRAR TAMBÉM O TEMPO QUE FALTA/PASSOU DO PRAZO.
 from datetime import date
-anonasc = int(input('Em que ano você nasceu? '))
-dataatual = date.today()
-idade = dataatual - anonasc
-if idade < 18:
-    print('Você ainda não tem idade para se alistar no exército!')
-    print('Ainda faltam {} anos para se alistar'.format())
-elif idade > 18:
-    print('Você já passou do tempo de se alistar, sua disgraça!')
-    print('Passou {} anos do prazo. Vai levar multa pra ficar esperto!'.format())
-else: 
-    print('Você deve se alistar imediatamente!')
-    print('Já alcançou a idade necessária.')
+atual = date.today().year
+nasc = int(input('Ano de Nascimento: '))
+idade = atual - nasc
+print('Quem nasceu em {} tem {} anos em {}.'.format(nasc, idade, atual))
+if idade == 18:
+    print('Você deve se alistar imediatamente!!')
+elif idade < 18:
+    print('Você ainda não tem 18 anos. Ainda faltam {} anos para se alistar.'.format(18 - idade))
+    print('Seu alistamento será em {}.'.format(atual + (18 - idade)))
+elif idade > 18: #ELIF E ELSE DÁ CERTO NO ÚLTIMO CASO
+    print('Você já deveria ter se alistado há {} anos.'.format(idade - 18))
+    print('O ano de seu alistamento foi em {}.'.format(atual - (idade - 18)))
